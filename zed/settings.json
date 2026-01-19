@@ -1,0 +1,74 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+	"base_keymap": "VSCode",
+
+	// Vim Mode
+	"vim_mode": true,
+	"relative_line_numbers": "enabled",
+
+	// Appearance
+	"theme": {
+		"light": "Ayu Light",
+		"dark": "Cursor Dark"
+	},
+	"buffer_font_size": 14.0,
+	"buffer_font_features": {
+		"calt": false
+	},
+	"tabs": {
+		"file_icons": true,
+		"git_status": true
+	},
+	"icon_theme": "Material Icon Theme",
+
+	// Editor
+	"tab_size": 2,
+
+	// AI
+	"agent": {
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-5.2-codex"
+		},
+		"favorite_models": [
+			{
+				"provider": "copilot_chat",
+				"model": "gpt-5.2-codex"
+			}
+		],
+		"model_parameters": []
+	},
+	"features": {
+		"edit_prediction_provider": "none"
+	},
+
+	// Biome
+	"formatter": {
+		"language_server": {
+			"name": "biome"
+		}
+	},
+	"code_actions_on_format": {
+		"source.fixAll.biome": true,
+		"source.organizeImports.biome": true
+	},
+
+	// Tailwind lsp
+	"lsp": {
+		"tailwindcss-language-server": {
+			"settings": {
+				"classFunctions": ["cva", "cx"],
+				"experimental": {
+					"classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"]
+				}
+			}
+		}
+	}
+}
