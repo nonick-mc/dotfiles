@@ -27,6 +27,9 @@
 		"git_status": true
 	},
 	"icon_theme": "Material Icon Theme",
+	"terminal": {
+		"font_family": "FiraCode Nerd Font"
+	},
 
 	// Editor
 	"tab_size": 2,
