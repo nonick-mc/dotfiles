@@ -1,3 +1,5 @@
+maximize = true
+
 theme = "Kanagawa Wave"
 background = "000000"
 font-size = 17
