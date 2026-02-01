@@ -1,5 +1,6 @@
 return {
-  "rebelot/kanagawa.nvim",
+  { "rebelot/kanagawa.nvim" },
+  { "xiyaowong/transparent.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
