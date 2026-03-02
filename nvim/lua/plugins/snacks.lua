@@ -10,6 +10,19 @@ return {
 /\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ 
 \ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\
  \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/ ]],
+        keys = {
+          { icon = "", desc = "New file", key = "e", action = ":enew" },
+          { icon = "󰈙", desc = "Files", key = "f", action = ":Telescope smart_open" },
+          {
+            icon = "",
+            desc = "Config",
+            key = "c",
+            action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+          },
+          { icon = "", desc = "Restore Session", key = "s", section = "session" },
+          { icon = "󰒲", desc = "Lazy", key = "l", action = ":Lazy" },
+          { icon = "󰅚", desc = "Quit", key = "q", action = ":qa" },
+        },
       },
       sections = {
         { section = "header" },
