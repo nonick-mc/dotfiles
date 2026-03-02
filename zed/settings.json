@@ -7,10 +7,14 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "session": {
+    "trust_all_worktrees": true,
+  },
   "inlay_hints": {
     "enabled": false,
   },
   "edit_predictions": {
+    "provider": "none",
     "copilot": {
       "enable_next_edit_suggestions": false,
     },
@@ -30,12 +34,6 @@
       "remote": false,
       "command": "npx",
       "args": ["-y", "next-devtools-mcp@latest"],
-    },
-    "heroui-react": {
-      "enabled": true,
-      "remote": false,
-      "command": "npx",
-      "args": ["-y", "@heroui/react-mcp@latest"],
     },
   },
   "buffer_font_family": "JetBrains Mono",
@@ -72,28 +70,28 @@
     "JavaScript": {
       "formatter": { "language_server": { "name": "biome" } },
       "code_actions_on_format": {
-        "source.filAll.biome": true,
+        "source.fixAll.biome": true,
         "source.organizeImports.biome": true,
       },
     },
     "TypeScript": {
       "formatter": { "language_server": { "name": "biome" } },
       "code_actions_on_format": {
-        "source.filAll.biome": true,
+        "source.fixAll.biome": true,
         "source.organizeImports.biome": true,
       },
     },
     "TSX": {
       "formatter": { "language_server": { "name": "biome" } },
       "code_actions_on_format": {
-        "source.filAll.biome": true,
+        "source.fixAll.biome": true,
         "source.organizeImports.biome": true,
       },
     },
     "JSON": {
       "formatter": { "language_server": { "name": "biome" } },
       "code_actions_on_format": {
-        "source.filAll.biome": true,
+        "source.fixAll.biome": true,
         "source.organizeImports.biome": true,
       },
     },
