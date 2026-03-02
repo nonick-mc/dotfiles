@@ -7,71 +7,128 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-	"base_keymap": "VSCode",
+  "inlay_hints": {
+    "enabled": false,
+  },
+  "edit_predictions": {
+    "copilot": {
+      "enable_next_edit_suggestions": false,
+    },
+  },
+  "agent": {
+    "default_profile": "write",
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.6",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "context_servers": {
+    "next-devtools": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "next-devtools-mcp@latest"],
+    },
+    "heroui-react": {
+      "enabled": true,
+      "remote": false,
+      "command": "npx",
+      "args": ["-y", "@heroui/react-mcp@latest"],
+    },
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "base_keymap": "VSCode",
 
-	// Vim Mode
-	"vim_mode": true,
-	"relative_line_numbers": "enabled",
+  // Vim Mode
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
 
-	// Appearance
-	"theme": {
-		"light": "Ayu Light",
-		"dark": "Cursor Dark"
-	},
-	"buffer_font_size": 14.0,
-	"buffer_font_features": {
-		"calt": false
-	},
-	"tabs": {
-		"file_icons": true,
-		"git_status": true
-	},
-	"icon_theme": "Material Icon Theme",
-	"terminal": {
-		"font_family": "FiraCode Nerd Font"
-	},
+  // Appearance
+  "theme": {
+    "light": "Ayu Light",
+    "dark": "Cursor Dark",
+  },
+  "buffer_font_size": 14.0,
+  "buffer_font_features": {
+    "calt": false,
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+  },
+  "icon_theme": "Material Icon Theme",
+  "terminal": {
+    "font_family": "FiraCode Nerd Font",
+  },
 
-	// Editor
-	"tab_size": 2,
+  // Editor
+  "tab_size": 2,
+  "auto_indent": false,
 
-	// AI
-	"agent": {
-		"default_model": {
-			"provider": "copilot_chat",
-			"model": "gpt-5.2-codex"
-		},
-		"favorite_models": [
-			{
-				"provider": "copilot_chat",
-				"model": "gpt-5.2-codex"
-			}
-		],
-		"model_parameters": []
-	},
-	"features": {
-		"edit_prediction_provider": "none"
-	},
+  // Languages Config
+  "languages": {
+    "JavaScript": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.filAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "TypeScript": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.filAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "TSX": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.filAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "JSON": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "source.filAll.biome": true,
+        "source.organizeImports.biome": true,
+      },
+    },
+    "CSS": {
+      "language_servers": [
+        "tailwindcss-intellisense-css",
+        "!vscode-css-language-server",
+        "...",
+      ],
+    },
+  },
 
-	// Biome
-	"formatter": {
-		"language_server": {
-			"name": "biome"
-		}
-	},
-	"code_actions_on_format": {
-		"source.fixAll.biome": true,
-		"source.organizeImports.biome": true
-	},
-
-	// Tailwind lsp
-	"lsp": {
-		"tailwindcss-language-server": {
-			"settings": {
-				"classFunctions": ["cva", "cx"],
-				"experimental": {
-					"classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"]
-				}
-			}
-		}
-	}
+  // LSP
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classFunctions": ["cva", "cx"],
+        "experimental": {
+          "classRegex": ["[cls|className]\\s\\:\\=\\s\"([^\"]*)"],
+        },
+      },
+    },
+  },
 }

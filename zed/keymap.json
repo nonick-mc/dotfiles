@@ -7,18 +7,9 @@
 // from the command palette.
 [
 	{
-		"context": "Workspace",
+		"context": "VimControl && vim_mode == normal",
 		"bindings": {
-			"shift shift": "file_finder::Toggle"
+			"space space": "file_finder::Toggle"
 		}
 	},
-
-	// LazyVim Config
-	{
-		"context": "Editor && vim_mode == normal",
-		"bindings": {
-			"shift-h": "pane::ActivatePreviousItem",
-			"shift-l": "pane::ActivateNextItem"
-		}
-	}
 ]
