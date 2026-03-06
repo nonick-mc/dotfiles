@@ -64,6 +64,22 @@
   // Editor
   "tab_size": 2,
   "auto_indent": false,
+  "file_scan_exclusions": [
+    // デフォルト
+    "**/.git",
+    "**/.svn",
+    "**/.hg",
+    "**/.jj",
+    "**/CVS",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "**/.classpath",
+    "**/.settings",
+    // 追加
+    "**/node_modules",
+    "**/.next",
+    "**/dist",
+  ],
 
   // Languages Config
   "languages": {
