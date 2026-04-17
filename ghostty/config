@@ -1,16 +1,17 @@
+
 maximize = true
 
+# 外観設定
 theme = "Kanagawa Wave"
 background = "000000"
-font-size = 17
-
-window-padding-x = 10
-window-padding-y = 10
-window-decoration = true
-window-padding-balance = true
-
+split-divider-color = #ffffff
 background-opacity = 0.85
 background-blur = 20
+
+# フォントの設定
+font-size = 17
+font-family = "JetBrains Mono"
+font-family = "Zen Kaku Gothic New Medium"
 
 # 起動時に前回の画面サイズを引き継ぐ
 window-save-state = always
@@ -25,3 +26,9 @@ font-feature = "-liga"
 
 # shift+enterを改行扱いとする
 keybind = shift+enter=text:\x0d
+
+# ペインリサイズ
+keybind = control+cmd+right=resize_split:right,30
+keybind = control+cmd+left=resize_split:left,30
+keybind = control+cmd+up=resize_split:up,30
+keybind = control+cmd+down=resize_split:down,30
