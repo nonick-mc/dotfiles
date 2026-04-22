@@ -2,7 +2,7 @@
 maximize = true
 
 # 外観設定
-theme = "Kanagawa Wave"
+theme = Kanagawa Dragon
 background = "000000"
 split-divider-color = #ffffff
 background-opacity = 0.85
@@ -26,6 +26,12 @@ font-feature = "-liga"
 
 # shift+enterを改行扱いとする
 keybind = shift+enter=text:\x0d
+
+# ペイン間の移動
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
 
 # ペインリサイズ
 keybind = control+cmd+right=resize_split:right,30
