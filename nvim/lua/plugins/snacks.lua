@@ -12,7 +12,7 @@ return {
  \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/ ]],
         keys = {
           { icon = "", desc = "New file", key = "e", action = ":enew" },
-          { icon = "󰈙", desc = "Files", key = "f", action = ":Telescope smart_open" },
+          { icon = "󰈙", desc = "Oil", key = "o", action = ":Oil --float" },
           {
             icon = "",
             desc = "Config",
@@ -26,11 +26,16 @@ return {
       },
       sections = {
         { section = "header" },
-        { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
         { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
         { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
         { section = "startup" },
       },
+    },
+    keys = {
+      { "<leader>fe", false },
+      { "<leader>fE", false },
+      { "<leader>E", false },
+      { "<leader>e", false },
     },
   },
 }
