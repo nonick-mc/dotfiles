@@ -21,6 +21,16 @@ return {
             }
           end,
         },
+        sources = {
+          path = {
+            modified = function(sym)
+              return sym:merge({
+                name = sym.name .. " ",
+                name_hl = "DiffAdded",
+              })
+            end,
+          },
+        },
       })
     end,
   },
