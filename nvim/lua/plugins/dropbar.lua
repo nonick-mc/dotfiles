@@ -14,6 +14,15 @@ return {
 
       require("dropbar").setup({
         bar = {
+          enable = function(buf, win)
+            local disable_ft = { "oil" }
+
+            return not vim.api.nvim_win_get_config(win).zindex
+              and vim.bo[buf].buftype == ""
+              and vim.api.nvim_buf_get_name(buf) ~= ""
+              and not vim.tbl_contains(disable_ft, vim.api.nvim_get_option_value("filetype", { buf = buf }))
+              and not vim.wo[win].diff
+          end,
           sources = function()
             local sources = require("dropbar.sources")
             return {

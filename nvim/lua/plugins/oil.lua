@@ -16,7 +16,6 @@ return {
     dependencies = {
       "nvim-mini/mini.icons",
       "refractalize/oil-git-status.nvim",
-      "JezerM/oil-lsp-diagnostics.nvim",
     },
     keys = {
       { "<leader>e", "<cmd>Oil --float<CR>", desc = "Explorer Oil" },
@@ -39,15 +38,14 @@ return {
         border = "rounded",
       },
       win_options = {
-        signcolumn = "yes",
+        signcolumn = "yes:2",
       },
       delete_to_trash = true,
       confirmation = { border = "rounded" },
     },
     config = function(_, opts)
       require("oil").setup(opts)
-      require("oil-git-status").setup({})
-      require("oil-lsp-diagnostics").setup()
+      require("oil-git-status").setup()
     end,
   },
 }
