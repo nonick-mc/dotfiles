@@ -7,6 +7,7 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.clipboard = ""
+vim.opt.conceallevel = 0
 
 -- custom title (nvim - {{cwd}})
 vim.opt.title = true
