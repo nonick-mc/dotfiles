@@ -1,15 +1,15 @@
-
 maximize = true
 
 # 外観設定
 theme = Kanagawa Dragon
-background = "000000"
-split-divider-color = #ffffff
+background = black
 background-opacity = 0.85
 background-blur = 20
+cursor-opacity = 0.7
+split-divider-color = #959fb4
 
 # フォントの設定
-font-size = 17
+font-size = 16
 font-family = "JetBrains Mono"
 font-family = "Zen Kaku Gothic New Medium"
 
@@ -26,12 +26,6 @@ font-feature = "-liga"
 
 # shift+enterを改行扱いとする
 keybind = shift+enter=text:\x0d
-
-# ペイン間の移動
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:down
-keybind = ctrl+k=goto_split:up
-keybind = ctrl+l=goto_split:right
 
 # ペインリサイズ
 keybind = control+cmd+right=resize_split:right,30
