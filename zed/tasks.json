@@ -1,0 +1,21 @@
+// Project tasks configuration. See https://zed.dev/docs/tasks for documentation.
+[
+  {
+    "label": "LazyGit",
+    "command": "lazygit -p $ZED_WORKTREE_ROOT",
+    "hide": "on_success",
+    "reveal_target": "center",
+    "show_summary": false,
+    "show_command": false,
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
+  },
+  {
+    "label": "ghq-fzf",
+    "command": "src=$(ghq list | fzf); if [ -n \"$src\" ]; then zed \"$(ghq root)/$src\"; fi",
+    "hide": "on_success",
+    "reveal_target": "center",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": true,
+  },
+]

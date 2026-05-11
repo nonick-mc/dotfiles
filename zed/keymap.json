@@ -12,4 +12,11 @@
 			"space space": "file_finder::Toggle"
 		}
 	},
+  {
+    "context": "EmptyPane || SharedScreen || (VimControl && !menu)",
+    "bindings": {
+      "space g g": ["task::Spawn", { "task_name": "LazyGit" }],
+      "ctrl-g": ["task::Spawn", { "task_name": "ghq-fzf" }],
+    },
+  },
 ]
