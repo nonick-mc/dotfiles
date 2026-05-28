@@ -18,10 +18,10 @@ return {
       "refractalize/oil-git-status.nvim",
     },
     keys = {
-      { "<leader>e", "<cmd>Oil --float<CR>", desc = "Explorer Oil" },
-      { "<leader>E", "<cmd>Oil . --float<CR>", desc = "Explorer Oil (cwd)" },
-      { "<leader>fe", "<cmd>Oil --float<CR>", desc = "Explorer Oil" },
-      { "<leader>fE", "<cmd>Oil . --float<CR>", desc = "Explorer Oil (cwd)" },
+      { "<leader>e", "<cmd>Oil --preview --float<CR>", desc = "Explorer Oil" },
+      { "<leader>E", "<cmd>Oil . --preview --float<CR>", desc = "Explorer Oil (cwd)" },
+      { "<leader>fe", "<cmd>Oil --preview --float<CR>", desc = "Explorer Oil" },
+      { "<leader>fE", "<cmd>Oil . --preview --float<CR>", desc = "Explorer Oil (cwd)" },
     },
     opts = {
       default_file_explorer = true,
@@ -34,7 +34,6 @@ return {
         end,
       },
       float = {
-        max_width = 0.6,
         border = "rounded",
       },
       win_options = {
@@ -42,10 +41,25 @@ return {
       },
       delete_to_trash = true,
       confirmation = { border = "rounded" },
+      preview_win = {
+        preview_method = "load",
+      },
     },
     config = function(_, opts)
       require("oil").setup(opts)
-      require("oil-git-status").setup()
+      require("oil-git-status").setup({})
+      vim.api.nvim_create_autocmd("BufEnter", {
+        callback = function(args)
+          local buf = args.buf
+          if vim.bo[buf].filetype == "image" then
+            return
+          end
+          local file = vim.api.nvim_buf_get_name(buf)
+          if file ~= "" and Snacks.image.supports_file(file) then
+            Snacks.image.buf.attach(buf)
+          end
+        end,
+      })
     end,
   },
 }
