@@ -9,9 +9,9 @@ cursor-opacity = 0.7
 split-divider-color = #959fb4
 
 # フォントの設定
-font-size = 16
+font-size = 17
 font-family = "JetBrains Mono"
-font-family = "Zen Kaku Gothic New Medium"
+font-family = "Hiragino Sans"
 
 # 入力時にマウスカーソルを非表示
 mouse-hide-while-typing = true
@@ -28,10 +28,16 @@ font-feature = "-dlig"
 font-feature = "-liga"
 
 # shift+enterを改行扱いとする
-keybind = shift+enter=text:\x0d
+keybind = shift+enter=text:\n
+
+# ペイン移動
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
 
 # ペインリサイズ
-keybind = control+cmd+right=resize_split:right,30
-keybind = control+cmd+left=resize_split:left,30
-keybind = control+cmd+up=resize_split:up,30
-keybind = control+cmd+down=resize_split:down,30
+keybind = control+cmd+l=resize_split:right,30
+keybind = control+cmd+h=resize_split:left,30
+keybind = control+cmd+k=resize_split:up,30
+keybind = control+cmd+j=resize_split:down,30
